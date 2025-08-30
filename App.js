@@ -20,12 +20,12 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <Stack.Navigator
         initialRouteName="Register"
         screenOptions={{
           headerShown: false,
-          cardStyle: { backgroundColor: '#121212' }
+          cardStyle: { backgroundColor: '#0A0A0A' }
         }}
       >
         <Stack.Screen name="Register" component={RegisterScreen} />

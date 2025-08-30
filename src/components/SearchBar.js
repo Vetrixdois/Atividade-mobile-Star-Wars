@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 const SearchBar = ({ value, onChangeText, placeholder = "Buscar..." }) => {
   return (
     <View style={styles.container}>
-      <Ionicons name="search" size={24} color="#2196F3" style={styles.icon} />
+      <Ionicons name="search" size={26} color="#00C0FF" style={styles.icon} />
       <TextInput
         style={styles.input}
         value={value}
@@ -16,7 +16,7 @@ const SearchBar = ({ value, onChangeText, placeholder = "Buscar..." }) => {
         autoCorrect={false}
       />
       {value.length > 0 && (
-        <Ionicons name="close-circle" size={24} color="#A0A8B0" style={styles.clearIcon} />
+        <Ionicons name="close-circle" size={26} color="#A0A8B0" style={styles.clearIcon} />
       )}
     </View>
   );
@@ -27,32 +27,32 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#1E222A',
-    borderRadius: 30,
-    paddingHorizontal: 20,
-    marginHorizontal: 15,
-    marginVertical: 20,
-    elevation: 8,
-    shadowColor: '#000',
+    borderRadius: 35,
+    paddingHorizontal: 25,
+    marginHorizontal: 20,
+    marginVertical: 25,
+    elevation: 10,
+    shadowColor: '#00C0FF',
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 5,
     },
-    shadowOpacity: 0.35,
-    shadowRadius: 6,
-    borderWidth: 1,
-    borderColor: 'rgba(33, 150, 243, 0.3)',
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    borderWidth: 2,
+    borderColor: 'rgba(0, 192, 255, 0.4)',
   },
   icon: {
-    marginRight: 15,
+    marginRight: 18,
   },
   input: {
     flex: 1,
-    height: 55,
-    color: '#F0F6FC',
-    fontSize: 18,
+    height: 60,
+    color: '#FFF',
+    fontSize: 19,
   },
   clearIcon: {
-    marginLeft: 15,
+    marginLeft: 18,
   },
 });
 

@@ -12,53 +12,53 @@ import { Ionicons } from '@expo/vector-icons';
 const HomeScreen = ({ navigation }) => {
   const menuItems = [
     {
-      title: 'Personagens',
+      title: 'PERSONAGENS',
       icon: 'people',
-      color: '#FF6347', // Tomato
+      color: '#00C0FF', // Vibrant Blue
       screen: 'Characters',
-      description: 'Explore os heróis e vilões'
+      description: 'Explore os heróis e vilões da galáxia.'
     },
     {
-      title: 'Filmes',
+      title: 'FILMES',
       icon: 'film',
-      color: '#4682B4', // SteelBlue
+      color: '#FFD700', // Gold
       screen: 'Films',
-      description: 'A saga completa'
+      description: 'Acompanhe a saga cinematográfica completa.'
     },
     {
-      title: 'Planetas',
+      title: 'PLANETAS',
       icon: 'planet',
-      color: '#3CB371', // MediumSeaGreen
+      color: '#00D4FF', // Bright Cyan
       screen: 'Planets',
-      description: 'Mundos distantes'
+      description: 'Descubra mundos distantes e suas histórias.'
     },
     {
-      title: 'Naves Espaciais',
+      title: 'NAVES ESPACIAIS',
       icon: 'rocket',
-      color: '#DAA520', // Goldenrod
+      color: '#FFC300', // Amber
       screen: 'Starships',
-      description: 'Naves lendárias'
+      description: 'Pilote naves lendárias e icônicas.'
     },
     {
-      title: 'Veículos',
+      title: 'VEÍCULOS',
       icon: 'car',
-      color: '#6A5ACD', // SlateBlue
+      color: '#00E5FF', // Electric Blue
       screen: 'Vehicles',
-      description: 'Transportes únicos'
+      description: 'Conheça os transportes únicos do universo.'
     },
     {
-      title: 'Espécies',
+      title: 'ESPÉCIES',
       icon: 'paw',
-      color: '#DC143C', // Crimson
+      color: '#FF9900', // Orange
       screen: 'Species',
-      description: 'Vida alienígena'
+      description: 'Aprenda sobre a vida alienígena e suas culturas.'
     },
     {
-      title: 'Estatísticas',
+      title: 'ESTATÍSTICAS',
       icon: 'stats-chart',
-      color: '#20B2AA', // LightSeaGreen
+      color: '#00BFFF', // Deep Sky Blue
       screen: 'Stats',
-      description: 'Dados do universo'
+      description: 'Analise dados e fatos do universo Star Wars.'
     },
   ];
 
@@ -66,10 +66,10 @@ const HomeScreen = ({ navigation }) => {
     <TouchableOpacity
       style={[styles.menuItem, { backgroundColor: item.color }]}
       onPress={() => navigation.navigate(item.screen)}
-      activeOpacity={0.8}
+      activeOpacity={0.7}
     >
       <View style={styles.menuItemContent}>
-        <Ionicons name={item.icon} size={40} color="#fff" />
+        <Ionicons name={item.icon} size={45} color="#FFF" />
         <Text style={styles.menuItemText}>{item.title}</Text>
         <Text style={styles.menuItemDescription}>{item.description}</Text>
       </View>
@@ -80,11 +80,11 @@ const HomeScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>STAR WARS WIKI</Text>
-        <Text style={styles.subtitle}>"Que a Força esteja com você!"</Text>
+        <Text style={styles.subtitle}>"Que a Força esteja com você - sempre."</Text>
         <View style={styles.headerDecoration}>
-          <Ionicons name="star" size={22} color="#2196F3" />
-          <Ionicons name="star" size={17} color="#2196F3" />
-          <Ionicons name="star" size={22} color="#2196F3" />
+          <Ionicons name="star-four-points" size={28} color="#FFD700" />
+          <Ionicons name="planet" size={22} color="#00C0FF" />
+          <Ionicons name="star-four-points" size={28} color="#FFD700" />
         </View>
       </View>
       
@@ -97,7 +97,7 @@ const HomeScreen = ({ navigation }) => {
         
         <View style={styles.footer}>
           <Text style={styles.footerText}>
-            Desenvolvido com a Força 💫 | 2024
+            Uma galáxia de informações ao seu alcance | © 2024
           </Text>
         </View>
       </ScrollView>
@@ -108,104 +108,106 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0D1117',
+    backgroundColor: '#0A0A0A',
   },
   header: {
-    padding: 35,
+    paddingVertical: 40,
+    paddingHorizontal: 20,
     alignItems: 'center',
-    backgroundColor: '#161B22',
-    borderBottomWidth: 0,
-    marginBottom: 20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    elevation: 15,
+    backgroundColor: '#121212',
+    marginBottom: 25,
+    shadowColor: '#00C0FF',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.7,
+    shadowRadius: 15,
+    elevation: 20,
   },
   title: {
-    fontSize: 48,
-    fontWeight: '900',
-    color: '#F0F6FC',
-    marginBottom: 10,
-    letterSpacing: 2,
-    textShadowColor: 'rgba(33, 150, 243, 0.6)',
-    textShadowOffset: { width: 0, height: 4 },
-    textShadowRadius: 8,
+    fontSize: 55,
+    fontWeight: 'bold',
+    color: '#FFF',
+    marginBottom: 12,
+    letterSpacing: 3,
+    textShadowColor: '#00C0FF',
+    textShadowOffset: { width: 0, height: 5 },
+    textShadowRadius: 10,
+    fontFamily: 'Star Jedi', // Assuming a custom font is loaded, otherwise remove
   },
   subtitle: {
-    fontSize: 20,
-    color: '#A0A8B0',
+    fontSize: 22,
+    color: '#E0E0E0',
     fontStyle: 'italic',
-    marginBottom: 20,
+    marginBottom: 25,
     textAlign: 'center',
+    paddingHorizontal: 10,
   },
   headerDecoration: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 18,
+    gap: 20,
   },
   content: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingTop: 10,
+    paddingHorizontal: 25,
+    paddingTop: 15,
   },
   menuGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    gap: 15,
+    gap: 20,
   },
   menuItem: {
-    width: '48%',
-    aspectRatio: 1,
-    borderRadius: 18,
+    width: '47%',
+    aspectRatio: 1.05,
+    borderRadius: 15,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 15,
-    elevation: 12,
+    marginBottom: 20,
+    elevation: 15,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.6,
-    shadowRadius: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.7,
+    shadowRadius: 15,
+    borderWidth: 2,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
   },
   menuItemContent: {
     alignItems: 'center',
-    padding: 10,
+    padding: 12,
   },
   menuItemText: {
-    color: '#F0F6FC',
-    fontSize: 20,
-    fontWeight: '700',
-    marginTop: 15,
+    color: '#FFF',
+    fontSize: 22,
+    fontWeight: '800',
+    marginTop: 18,
     textAlign: 'center',
-    textShadowColor: 'rgba(0, 0, 0, 0.8)',
-    textShadowOffset: { width: 1, height: 2 },
-    textShadowRadius: 4,
+    textShadowColor: 'rgba(0, 0, 0, 0.9)',
+    textShadowOffset: { width: 2, height: 3 },
+    textShadowRadius: 5,
   },
   menuItemDescription: {
     color: '#B0B0B0',
-    fontSize: 13,
+    fontSize: 14,
     textAlign: 'center',
-    marginTop: 8,
-    opacity: 0.95,
+    marginTop: 10,
+    opacity: 0.9,
     textShadowColor: 'rgba(0, 0, 0, 0.8)',
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 3,
   },
   footer: {
     alignItems: 'center',
-    paddingVertical: 40,
-    marginTop: 30,
-    borderTopWidth: 1,
-    borderTopColor: 'rgba(255, 255, 255, 0.1)',
+    paddingVertical: 50,
+    marginTop: 40,
+    borderTopWidth: 1.5,
+    borderTopColor: 'rgba(255, 255, 255, 0.15)',
   },
   footerText: {
-    color: '#8B949E',
-    fontSize: 16,
+    color: '#A0A0A0',
+    fontSize: 17,
     fontStyle: 'italic',
-    textShadowColor: 'rgba(0, 0, 0, 0.6)',
+    textShadowColor: 'rgba(0, 0, 0, 0.7)',
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 2,
   },

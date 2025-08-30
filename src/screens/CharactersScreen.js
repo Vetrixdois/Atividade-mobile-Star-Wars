@@ -61,7 +61,7 @@ const CharactersScreen = ({ navigation }) => {
     if (!loading) return null;
     return (
       <View style={styles.loadingFooter}>
-        <ActivityIndicator size="large" color="#2196F3" />
+        <ActivityIndicator size="large" color="#FFD700" />
       </View>
     );
   };
@@ -91,72 +91,71 @@ const CharactersScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0D1117',
+    backgroundColor: '#0A0A0A',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    backgroundColor: '#161B22',
-    borderBottomWidth: 0,
-    paddingVertical: 25,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    elevation: 15,
+    backgroundColor: '#121212',
+    paddingVertical: 30,
+    shadowColor: '#00C0FF',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.7,
+    shadowRadius: 15,
+    elevation: 20,
   },
   backButtonContainer: {
     paddingRight: 15,
   },
   backButton: {
-    color: '#2196F3',
-    fontSize: 18,
+    color: '#00C0FF',
+    fontSize: 20,
     fontWeight: 'bold',
   },
   title: {
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: 'bold',
-    color: '#F0F6FC',
-    textShadowColor: 'rgba(33, 150, 243, 0.5)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 3,
+    color: '#FFF',
+    textShadowColor: '#00C0FF',
+    textShadowOffset: { width: 1, height: 2 },
+    textShadowRadius: 5,
   },
   list: {
     flex: 1,
-    padding: 15,
+    padding: 20,
   },
   characterCard: {
     backgroundColor: '#1E222A',
-    borderRadius: 15,
-    padding: 20,
-    marginBottom: 15,
-    elevation: 8,
+    borderRadius: 18,
+    padding: 22,
+    marginBottom: 18,
+    elevation: 10,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.35,
-    shadowRadius: 6,
-    borderLeftWidth: 5,
-    borderLeftColor: '#2196F3',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.4,
+    shadowRadius: 7,
+    borderLeftWidth: 6,
+    borderLeftColor: '#00C0FF',
   },
   characterName: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: 'bold',
-    color: '#F0F6FC',
-    marginBottom: 10,
-    textShadowColor: 'rgba(0, 0, 0, 0.6)',
+    color: '#FFF',
+    marginBottom: 12,
+    textShadowColor: 'rgba(0, 0, 0, 0.7)',
     textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 2,
+    textShadowRadius: 3,
   },
   characterInfo: {
-    gap: 8,
+    gap: 10,
   },
   characterDetail: {
-    fontSize: 16,
-    color: '#A0A8B0',
+    fontSize: 17,
+    color: '#E0E0E0',
   },
   loadingFooter: {
-    paddingVertical: 30,
+    paddingVertical: 35,
     alignItems: 'center',
   },
 });
